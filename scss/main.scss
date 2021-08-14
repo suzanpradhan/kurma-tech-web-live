@@ -243,15 +243,20 @@
 
                     & .web-footer{
                         display: flex;
-                        // background-color: #0d0d0d;
+                        flex-direction: column;
                         width: 100%;
                         justify-content: center;
                         padding: 18px 0px;
                         & > p {
-                            max-width: 1200px;
-                            display: flex;
-                            justify-content: center;
+                            min-width: 100%;
                             width: 100%;
+                            text-align: center;
+                            &:nth-child(2){
+                                margin-top: 9px;
+                            }
+                            & i{
+                                color: #02E3D3;
+                            }
                         }
                     }
                 }
