@@ -1,0 +1,201 @@
+
+
+#testimonial{
+    width: 1200px;
+    max-width: 1200px;
+    // margin: 60px 20px;
+    margin-top: 10rem;
+    margin-left: 20px;
+    margin-right: 20px;
+    .test_details{
+        & .test_title{
+            font-size: 24px;
+            color: #666;
+            text-transform: uppercase;
+            max-width: max-content;
+            position: relative;
+            margin-bottom: 18px;
+            color: #EF9F7C;
+            &::before{
+                content: '';
+                background: #02E3D3;
+                bottom: -4.5px;
+                left: 0;
+                width: 45%;
+                height: 2px;
+                max-width: 100%;
+                position: absolute;
+                border-radius: 24px;
+            }
+        }
+
+        & .test_paragraph{
+            color: #999;
+            font-size: 15px;
+            line-height: 18px;
+            max-width: 50%;
+        }
+    }
+
+    & .test_section{
+        display: grid;
+        max-width: 900px;
+        margin: 0 auto;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-gap: 20px;
+        box-sizing: border-box;
+        padding: 20px 0;
+        margin-top: 132px;
+
+        & .box{
+            position: relative;
+            padding: 40px;
+            transition: .6s ease-in-out;
+            text-align: center;
+            background: #fff;
+            padding-top: 80px;
+            &:hover:nth-child(odd){
+                background: #EF9F7C;
+                cursor: pointer;
+            }
+
+            &:hover:nth-child(even){
+                background: #02E3D3;
+                cursor: pointer;
+            }
+
+            &::before{
+                content: '';
+                position: absolute;
+                top: 20px;
+                right: 40px;
+                width: 80px;
+                height: 80px;
+                background: url(../img/icons/testimonials/quotes.png);
+                background-size: cover;
+                opacity: .05;
+                pointer-events: none;
+                transition: .6s;
+            }
+
+            &:hover::before{
+                transform: translateY(-30px);
+                opacity: .2;
+            }
+
+            &::after{
+                content: '';
+                position: absolute;
+                bottom: 20px;
+                left: 40px;
+                width: 80px;
+                height: 80px;
+                background: url(../img/icons/testimonials/quotes.png);
+                background-size: cover;
+                opacity: .05;
+                pointer-events: none;
+                transition: .6s;
+                transform: rotate(180deg) translateY(0px);
+            }
+
+            &:hover::after{
+                transform: rotate(180deg) translateY(-30px);
+                opacity: .2;
+            }
+
+            &:hover p,
+            &:hover h4,
+            &:hover h4 span
+            {
+                color: #fff;
+            }
+
+            & .imgbox{
+                width: 120px;
+                height: 120px;
+                overflow: hidden;
+                border-radius: 50%;
+                box-shadow: 0px 0px 6px 0px;
+                position: absolute;
+                top: -60px;
+                left: 50%;
+                transform: translateX(-50%);
+                & img{
+                    width: 100%;
+                    height: auto;
+                    object-fit: contain;
+                    transform: scale(1.1);
+                }
+            }
+
+            & p{
+                margin: 0 0 12px 0;
+                padding: 0;
+                transition: 0.6s;
+                font-size: 15px;
+                color: #777;
+            }
+
+            & h4{
+                margin: 0;
+                padding: 0;
+                transition: 0.6s;
+                font-size: 15px;
+                color: #666;
+                font-weight: 700;
+                line-height: 20px;
+                text-transform: uppercase;
+
+                & span{
+                    font-weight: 600;
+                    font-size: 14px;
+                    color: #c5c5c5;
+                    transition: 0.6s;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px)
+{
+    .test_details{
+        width: 50%;
+        margin: 0 auto;
+        padding: 20px;
+
+        & .test_paragraph{
+            max-width: 100%!important;
+        }
+    }
+
+    .test_section{
+        display: flex!important;
+        flex-direction: column;
+        width: max-content;
+        height: auto !important;
+        margin: 0 auto;
+
+        & .box{
+            width: 420px!important;
+
+            &:nth-child(2){
+                margin-top: 120px;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px)
+{
+    .test_section .box{
+        width: 320px!important;
+    }
+}
+
+@media (max-width: 425px)
+{
+    .test_details{
+        width: 100%;
+    }
+}
