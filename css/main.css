@@ -1074,16 +1074,24 @@
 
 * body main footer .footer-section .web-footer {
   display: flex;
+  flex-direction: column;
   width: 100%;
   justify-content: center;
   padding: 18px 0px;
 }
 
 * body main footer .footer-section .web-footer > p {
-  max-width: 1200px;
-  display: flex;
-  justify-content: center;
+  min-width: 100%;
   width: 100%;
+  text-align: center;
+}
+
+* body main footer .footer-section .web-footer > p:nth-child(2) {
+  margin-top: 9px;
+}
+
+* body main footer .footer-section .web-footer > p i {
+  color: #02E3D3;
 }
 
 @media (max-width: 1024px) {
